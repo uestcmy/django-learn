@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Devices List</title>
+</head>
+<body>
+
+
+<h1>Devices List</h1>
+
+<table border="1">
+
+    <tr>
+        <td>Device Name</td>
+        <td>IP</td>
+        <td>Vendor</td>
+        <td>Model</td>
+        <td>Series</td>
+    </tr>
+    {% for i in dev_info_list %}
+
+        <tr>
+            <td>{{ i.dev_name }}</td>
+            <td>{{ i.ip }}</td>
+            <td>{{ i.vendor }}</td>
+            <td>{{ i.model }}</td>
+            <td>{{ i.series }}</td>
+        </tr>
+
+    {% endfor %}
+
+</table>
+
+<a href="/add_devices/" rel="external nofollow" >Add a device</a><br>
+
+</body>
+</html>

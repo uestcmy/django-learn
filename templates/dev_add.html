@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Add Devices</title>
+</head>
+<h1>Please input information of a device</h1>
+<body>
+    <form action="/add_devices/" method="post">
+        {% csrf_token %}
+        Devices name: <input type="text" name="dev_name">
+        Mgmt IP :<input type="text" name="ip">
+        Vendor: <input type="text" name="vendor">
+        Model: <input type="text" name="model">
+        Series: <input type="text" name="series">
+        <input type="submit" value="Submit">
+    </form>
+
+    <a href="/dev_list/" rel="external nofollow" >Show devices list</a>
+
+</body>
+</html>
